@@ -1,0 +1,33 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+}
+
+nav.navbar {
+    justify-content: space-between;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-green {
+    background-color: #538d43;
+}
+
+.jumbotron {
+    border-radius: 0;
+    box-shadow: inset 0 0 2rem #00000088;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+img.hero {
+    width: 100%;
+}
+
+.navbar-dark a {
+    color: white;
+}
