@@ -1,8 +1,13 @@
 * {
     font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
 }
 
-nav.navbar {
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+}
+
+#navbar-items {
     justify-content: space-between;
 }
 
@@ -19,9 +24,18 @@ nav.navbar {
     box-shadow: inset 0 0 2rem #00000088;
 }
 
+.glow {
+    padding: 1rem;
+    box-shadow: 0 0 2rem 1rem white;
+}
+
 .row {
     justify-content: center;
     align-items: center;
+}
+
+img {
+    max-width: 100%;
 }
 
 img.hero {
