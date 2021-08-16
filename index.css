@@ -49,3 +49,7 @@ img.hero {
 .navbar-dark a {
     color: #fff;
 }
+
+label {
+    font-weight: bolder;
+}
