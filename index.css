@@ -53,3 +53,7 @@ img.hero {
 label {
     font-weight: bolder;
 }
+
+table p {
+    margin: 0;
+}
