@@ -17,6 +17,7 @@
 <div class="container-fluid">
     <h2>OSS Dashboard</h2>
     <table class="table table-bordered table-hover table-striped table-responsive-xl">
+        <caption>OSS Dashboard</caption>
         <thead>
             <tr>
                 <th scope="col">Name</th>
@@ -49,7 +50,7 @@
 <script>
     const codeURL = (name) => `https://github.com/ecoAPM/${name}`;
 
-    const versionBadgeURL = (info) => `https://img.shields.io/${packageManager(info.type)}/v/${info.package}?logo=${packageManager(info.type)}&label=Version`;
+    const versionBadgeURL = (info) => `https://img.shields.io/${packageManager(info.type)}/v/${info.package}?logo=${packageManager(info.type)}&label=Install`;
 
     const packageManager = (type) => {
         switch (type) {
@@ -113,6 +114,11 @@
                     tests: false
                 },
                 {
+                    name: "SrcSet",
+                    package: 'srcset',
+                    type: ".NET"
+                },
+                {
                     name: "NotoSans",
                     package: "notosans",
                     type: "Node",
@@ -121,6 +127,11 @@
                 {
                     name: "TompkinsCOVID",
                     type: ".NET"
+                },
+                {
+                    name: "ecoAPM.com",
+                    CI: false,
+                    tests: false
                 }
             ]
         }),
