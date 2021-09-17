@@ -11,10 +11,7 @@ const data = [
     },
     {
         name: "BenchmarkMockNet",
-        type: ".NET",
-        CI: false,
-        quality: false,
-        tests: false
+        type: ".NET"
     },
     {
         name: "php-libyear",
