@@ -30,6 +30,11 @@ const data = [
         tests: false
     },
     {
+        name: "GitHubLabelSync",
+        package: "GitHubLabelSync",
+        type: ".NET"
+    },
+    {
         name: "TompkinsCOVID",
         type: ".NET"
     },
