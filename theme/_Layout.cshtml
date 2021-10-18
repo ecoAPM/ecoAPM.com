@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>{{ page.title }} &ndash; ecoAPM</title>
+        <title>@Document.GetString("PageTitle") &ndash; ecoAPM</title>
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -20,21 +20,21 @@
 
         <script type="application/ld+json">
             {
-                "@context": "http://schema.org",
-                "@type": "Organization",
-                "@id": "https://ecoAPM.com",
+                "@@context": "http://schema.org",
+                "@@type": "Organization",
+                "@@id": "https://ecoAPM.com",
                 "name": "ecoAPM",
                 "url": "https://ecoAPM.com",
                 "image": {
-                    "@context": "http://schema.org",
-                    "@type": "ImageObject",
+                    "@@context": "http://schema.org",
+                    "@@type": "ImageObject",
                     "url": "https://ecoAPM.com/images/logo.jpg",
                     "height": "400",
                     "width": "400"
                 },
                 "logo": {
-                    "@context": "http://schema.org",
-                    "@type": "ImageObject",
+                    "@@context": "http://schema.org",
+                    "@@type": "ImageObject",
                     "url": "https://ecoAPM.com/images/logo.jpg",
                     "height": "400",
                     "width": "400"
@@ -43,8 +43,8 @@
                 "email": "steve@ecoAPM.com",
                 "legalName": "ecoAPM LLC",
                 "location": {
-                    "@context": "http://schema.org",
-                    "@type": "PostalAddress",
+                    "@@context": "http://schema.org",
+                    "@@type": "PostalAddress",
                     "addressLocality": "Ithaca",
                     "addressRegion": "NY",
                     "addressCountry": "US"
@@ -52,22 +52,22 @@
             }
             </script>
 
-        <script src="/lib/jquery.min.js"></script>
-        <script src="/lib/bootstrap.min.js"></script>
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
 
-        <link rel="stylesheet" href="/lib/bootstrap.min.css" />
-        <link rel="stylesheet" href="/lib/noto.css" />
-        <link rel="stylesheet" href="/index.css" />
-        <link rel="icon" href="/images/logo.png" />
+        <link rel="stylesheet" href="lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="lib/noto.css" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="icon" href="images/logo.png" />
     </head>
 
     <body class="min-vh-100 d-flex flex-column">
         <header>
-            {% include navigation.html %}
+	        @await Html.PartialAsync("nav")
         </header>
 
         <main>
-            {{content}}
+            @RenderBody()
         </main>
 
         <footer class="navbar navbar-dark bg-dark text-light mt-auto">
