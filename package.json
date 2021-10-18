@@ -4,7 +4,6 @@
   "homepage": "https://ecoAPM.com",
   "repository": "git@github.com:ecoAPM/ecoAPM",
   "author": "Steve Desmond <steve@vtsv.ca>",
-  "license": "MIT",
   "private": true,
   "devDependencies": {
     "bootstrap": "4.6.0",
@@ -15,5 +14,6 @@
   },
   "scripts": {
     "postinstall": "cp -r node_modules/bootstrap/dist/css/bootstrap.min.css node_modules/bootstrap/dist/js/bootstrap.min.js node_modules/jquery/dist/jquery.min.js node_modules/marked/marked.min.js node_modules/notosans/noto.css node_modules/notosans/dist node_modules/vue/dist/vue.global.prod.js lib"
-  }
+  },
+  "main": "index.html"
 }
