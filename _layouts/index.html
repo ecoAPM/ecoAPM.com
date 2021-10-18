@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>ecoAPM</title>
+        <title>{{ page.title }} &ndash; ecoAPM</title>
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -61,7 +61,7 @@
         <link rel="icon" href="/images/logo.png" />
     </head>
 
-    <body>
+    <body class="min-vh-100 d-flex flex-column">
         <header>
             {% include navigation.html %}
         </header>
@@ -70,13 +70,13 @@
             {{content}}
         </main>
 
-        <footer class="navbar navbar-dark bg-dark text-light">
+        <footer class="navbar navbar-dark bg-dark text-light mt-auto">
             <span class="col-12 text-center">
                 &copy; ecoAPM LLC
             </span>
             <span class="col-12 text-center small">
                 Stock photos courtesy of
-                <a href="https://www.wocintechchat.com/">
+                <a class="text-light" href="https://www.wocintechchat.com/">
                     #WOCinTech Chat
                 </a>
             </span>

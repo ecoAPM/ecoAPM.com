@@ -1,11 +1,6 @@
 defaults:
-  - scope:
-      path: ""
-    values:
-      layout: index
-      permalink: :basename/
-  - scope:
-      path: "_posts"
-    values:
-      layout: blog
-      permalink: blog/:title/
+- scope:
+    path: ""
+  values:
+    layout: index
+    permalink: /:path/:basename/

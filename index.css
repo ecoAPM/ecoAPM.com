@@ -11,10 +11,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
 }
 
-#navbar-items {
-    justify-content: space-between;
-}
-
 .bg-black {
     background-color: #000;
 }
@@ -24,34 +20,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .jumbotron {
-    border-radius: 0;
     box-shadow: inset 0 0 2rem #0008;
 }
 
 .glow {
     padding: 1rem;
     box-shadow: 0 0 2rem 1rem #fff;
-}
-
-.row {
-    justify-content: center;
-    align-items: center;
-}
-
-img {
-    max-width: 100%;
-}
-
-img.hero {
-    width: 100%;
-}
-
-.navbar-dark a {
-    color: #fff;
-}
-
-label {
-    font-weight: bolder;
 }
 
 table p {
