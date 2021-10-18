@@ -351,6 +351,5 @@ MigrationBackup/
 
 /.cache
 /.idea
-/.jekyll-cache
-/_site
+/.vscode
 /dist
