@@ -16,7 +16,7 @@ namespace ecoAPM.com
 				.ModifyPipeline("Content", SetURL)
 				.DeployToGitHubPages("ecoAPM", "ecoAPM.com", Config.FromSetting<string>("GITHUB_TOKEN"))
 				.RunAsync();
-				
+
 		private static void SetURL(IPipeline pipeline)
 			=> pipeline.ProcessModules.Add(SetDestination());
 
@@ -28,14 +28,18 @@ namespace ecoAPM.com
 
 		private static NormalizedPath NicePath(IDocument document)
 			=> new NormalizedPath(Path(document));
-		
+
 		private static string Path(IDocument document)
 			=> System.IO.Path.Join(Directory(document), "index.html");
-		
-		private static string Directory(IDocument document)
-			=> Directory(document.Source.FileNameWithoutExtension.ToString());
 
-		private static string Directory(string filename)
-			=> filename == "index" ? string.Empty : filename;
+		private static string Directory(IDocument document)
+			=> Directory(document.Source.GetRelativeInputPath());
+
+		private static string Directory(NormalizedPath path)
+			=> path.ChangeExtension("")
+				.ToString()
+				.TrimEnd('.')
+				.Replace("index", "")
+				.Replace("//", "/");
 	}
 }
