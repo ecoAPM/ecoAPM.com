@@ -1,0 +1,8 @@
+﻿@{ Layout = "_Simple"; }
+
+@RenderBody()
+
+<a class="btn btn-light text-dark" href="https://github.com/@(Document.GetString("GitHubOrganization") ?? "ecoAPM")/@Document.GetString("Name")">
+	<img src="/images/GitHub-Mark-32px.png" alt="GitHub logo"/>
+	View Source
+</a>

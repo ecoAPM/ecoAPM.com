@@ -1,4 +1,4 @@
-const codeURL = (name) => `https://github.com/ecoAPM/${name}`;
+const codeURL = (info) => `https://github.com/${info.org}/${info.name}`;
 
 const versionBadgeURL = (info) => `https://img.shields.io/${packageManager(info.type)}/v/${info.package}?logo=${packageManager(info.type)}&label=Install`;
 
@@ -30,22 +30,22 @@ const packageManagerURL = (type) => {
     }
 };
 
-const issueBadgeURL = (name) => `https://img.shields.io/github/issues-raw/ecoAPM/${name}?logo=GitHub&label=Issues`;
-const issueURL = (name) => `${codeURL(name)}/issues`;
+const issueBadgeURL = (info) => `https://img.shields.io/github/issues-raw/${info.org}/${info.name}?logo=GitHub&label=Issues`;
+const issueURL = (info) => `${codeURL(info)}/issues`;
 
-const prBadgeURL = (name) => `https://img.shields.io/github/issues-pr-raw/ecoAPM/${name}?logo=GitHub&label=PRs`;
-const prURL = (name) => `${codeURL(name)}/pulls`;
+const prBadgeURL = (info) => `https://img.shields.io/github/issues-pr-raw/${info.org}/${info.name}?logo=GitHub&label=PRs`;
+const prURL = (info) => `${codeURL(info)}/pulls`;
 
-const ciBadgeURL = (name) => `${codeURL(name)}/workflows/CI/badge.svg`;
-const ciURL = (name) => `${codeURL(name)}/actions`;
+const ciBadgeURL = (info) => `${codeURL(info)}/workflows/CI/badge.svg`;
+const ciURL = (info) => `${codeURL(info)}/actions`;
 
-const coverageBadgeURL = (name) => qualityBadgeURL(name, 'coverage');
-const maintainabilityBadgeURL = (name) => qualityBadgeURL(name, 'sqale_rating');
-const reliabilityBadgeURL = (name) => qualityBadgeURL(name, 'reliability_rating');
-const securityBadgeURL = (name) => qualityBadgeURL(name, 'security_rating');
+const coverageBadgeURL = (info) => qualityBadgeURL(info, 'coverage');
+const maintainabilityBadgeURL = (info) => qualityBadgeURL(info, 'sqale_rating');
+const reliabilityBadgeURL = (info) => qualityBadgeURL(info, 'reliability_rating');
+const securityBadgeURL = (info) => qualityBadgeURL(info, 'security_rating');
 
-const qualityBadgeURL = (name, type) => `https://sonarcloud.io/api/project_badges/measure?project=ecoAPM_${name}&metric=${type}`;
-const qualityURL = (name) => `https://sonarcloud.io/dashboard?id=ecoAPM_${name}`;
+const qualityBadgeURL = (info, type) => `https://sonarcloud.io/api/project_badges/measure?project=${info.org}_${info.name}&metric=${type}`;
+const qualityURL = (info) => `https://sonarcloud.io/dashboard?id=${info.org}_${info.name}`;
 
 const app = {
     data: () => ({
@@ -53,15 +53,15 @@ const app = {
     }),
     methods: {
         render: (data) => marked.parse(data),
-        link: (info) => `[${info.name}](${codeURL(info.name)})`,
+        link: (info) => `[${info.name}](${codeURL(info)})`,
         versionBadge: (info) => info.package ? `[![Version](${versionBadgeURL(info)})](${packageURL(info)})` : '',
-        ciBadge: (info) => info.CI ?? true ? `[![CI](${ciBadgeURL(info.name)})](${ciURL(info.name)})` : '',
-        issueBadge: (info) => `[![Issues](${issueBadgeURL(info.name)})](${issueURL(info.name)})`,
-        prBadge: (info) => `[![PRs](${prBadgeURL(info.name)})](${prURL(info.name)})`,
-        coverageBadge: (info) => info.tests ?? true ? `[![Coverage](${coverageBadgeURL(info.name)})](${qualityURL(info.name)})` : '',
-        maintainabilityBadge: (info) => info.quality ?? true ? `[![Maintainability](${maintainabilityBadgeURL(info.name)})](${qualityURL(info.name)})` : '',
-        reliabilityBadge: (info) => info.quality ?? true ? `[![Reliability](${reliabilityBadgeURL(info.name)})](${qualityURL(info.name)})` : '',
-        securityBadge: (info) => info.quality ?? true ? `[![Security](${securityBadgeURL(info.name)})](${qualityURL(info.name)})` : ''
+        ciBadge: (info) => info.CI ?? true ? `[![CI](${ciBadgeURL(info)})](${ciURL(info)})` : '',
+        issueBadge: (info) => `[![Issues](${issueBadgeURL(info)})](${issueURL(info)})`,
+        prBadge: (info) => `[![PRs](${prBadgeURL(info)})](${prURL(info)})`,
+        coverageBadge: (info) => info.tests ?? true ? `[![Coverage](${coverageBadgeURL(info)})](${qualityURL(info)})` : '',
+        maintainabilityBadge: (info) => info.quality ?? true ? `[![Maintainability](${maintainabilityBadgeURL(info)})](${qualityURL(info)})` : '',
+        reliabilityBadge: (info) => info.quality ?? true ? `[![Reliability](${reliabilityBadgeURL(info)})](${qualityURL(info)})` : '',
+        securityBadge: (info) => info.quality ?? true ? `[![Security](${securityBadgeURL(info)})](${qualityURL(info)})` : ''
     }
 };
 Vue.createApp(app).mount('table');

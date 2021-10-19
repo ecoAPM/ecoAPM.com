@@ -1,5 +1,8 @@
 :root {
 	--ecogreen: #538d43;
+	--ecogreen-dark: #477939;
+	--ecogreen-darker: #3f6c33;
+	--ecogreen-darkest: #2b4922;
 }
 
 * {
@@ -11,6 +14,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
 }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	font-weight: 200;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	text-decoration: none;
+}
+
 .bg-black {
 	background-color: #000;
 }
@@ -19,8 +30,49 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: var(--ecogreen);
 }
 
+.btn-ecogreen {
+	color: white;
+	font-weight: revert;
+	border-color: var(--ecogreen-darker);
+	background: var(--ecogreen-dark) linear-gradient(var(--ecogreen), var(--ecogreen-dark));
+}
+
+.btn-ecogreen:hover,
+.btn-ecogreen:focus {
+	border-color: var(--ecogreen-darkest);
+	background: var(--ecogreen-darker) linear-gradient(var(--ecogreen-dark), var(--ecogreen-darker));
+}
+
+.btn-ecogreen:active {
+	border-color: var(--ecogreen-darkest);
+	background: var(--ecogreen-darkest) linear-gradient(var(--ecogreen-darker), var(--ecogreen-darkest));
+}
+
+.btn-greydient {
+	color: white;
+	font-weight: revert;
+	border-color: #777;
+	background: #888 linear-gradient(#999, #888);
+}
+
+.btn-greydient:hover,
+.btn-greydient:focus {
+	color: white;
+	border-color: #666;
+	background: #777 linear-gradient(#888, #777);
+}
+
+.btn-greydient:active {
+	border-color: #555;
+	background: #666 linear-gradient(#777, #666);
+}
+
 .jumbotron {
 	box-shadow: inset 0 0 2rem #0008;
+}
+
+.jumbotron-fluid {
+	box-shadow: inset 0 0 1rem #0008;
 }
 
 .glow {
@@ -30,4 +82,150 @@ h1, h2, h3, h4, h5, h6 {
 
 table p {
 	margin: 0;
+}
+
+.faded {
+	filter: brightness(75%);
+}
+
+.overlay {
+	position: relative;
+}
+
+.overlay .centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.overlay .center-v {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.lightbox .bkg {
+    position: absolute;
+    z-index: -1;
+    width: 33%;
+	margin: 0 25%;
+    box-shadow: 0 0 2rem 12.5rem #fffd;
+}
+
+.darkbox .bkg {
+    position: absolute;
+	z-index: -1;
+    width: 100%;
+    left: 0;
+    margin: 1rem 0;
+    box-shadow: 0 0 1rem 2rem #0004;
+}
+
+@media (min-width: 576px) {
+	.darkbox .bkg {
+		box-shadow: 0 0 2rem 4rem #0004;
+	}
+}
+
+.card {
+	border: none;
+	border-radius: 1rem;
+}
+
+.card p:last-child {
+	margin: 0;
+}
+
+a.card.overlay {
+	transition: 0.2s ease-in-out;
+}
+
+a.card.square.overlay:hover,
+a.card.square.overlay:focus {
+	transform: scale(1.05);
+	filter: brightness(125%);
+}
+
+.card.overlay .card {
+	background: transparent;
+	box-shadow: 0 0 0 1rem white;
+}
+
+@media (min-width: 1200px) {
+	.overlay-xl {
+		position: relative;
+	}
+
+	.overlay-xl .lightbox {
+		position: absolute;
+		height: calc(100% - 4rem);
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.card-xl {
+		border-radius: 1rem;
+	}
+
+	.card-xl.overlay-xl .card-xl {
+		background: transparent;
+		box-shadow: 0 0 0 1rem white;
+	}
+}
+
+.square {
+	aspect-ratio: 1;
+}
+
+.rect {
+	aspect-ratio: 2;
+}
+
+.rect-3-2 {
+	aspect-ratio: 3/2;
+}
+
+.rect-4-3 {
+	aspect-ratio: 4/3;
+}
+
+.rect-16-9 {
+	aspect-ratio: 16/9;
+}
+
+.blurry {
+	filter: blur(4px);
+}
+
+.faded.blurry {
+	filter: brightness(0.75) blur(4px);
+}
+
+.background-img {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+ul {
+	list-style-type: "– ";
+	padding-left: 1rem;
+}
+
+li {
+	padding-left: 0.5rem;
+}
+
+ul.contains-task-list {
+	list-style-type: none;
+}
+
+@media (min-width: 768px) {
+	.sidebar-img {
+		margin-top: -2.5rem;
+	}
 }

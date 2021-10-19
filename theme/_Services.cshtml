@@ -1,0 +1,36 @@
+﻿@{ Layout = "_Layout.cshtml"; }
+@using SrcSet.Statiq
+@using System.Globalization
+
+<header class="jumbotron-fluid bg-green">
+	<h2 class="p-3 m-0 text-center">
+		<a href="/@Document.Source.Parent.GetRelativeInputPath().ToString()" class="text-white">
+			@CultureInfo.InvariantCulture.TextInfo.ToTitleCase(Document.Source.Parent.GetRelativeInputPath().ToString())
+		</a>
+	</h2>
+</header>
+
+<article class="container-fluid container-xl p-0 px-xl-5">
+	@if (!string.IsNullOrWhiteSpace(Document.GetString("Header")))
+	{
+		<header class="overlay">
+			@Html.Raw(ResponsiveImages.SrcSet(Document.GetString("Header"), attributes: new Dictionary<string, string>
+			{
+				{ "class", "img-fluid w-100 faded" },
+				{ "alt", Document.GetString("Alt") }
+			}))
+			<h3 class="darkbox centered text-white">
+				<span class="bkg"></span>
+				@Document.GetTitle().Replace(" ", " ")
+			</h3>
+		</header>
+	}
+
+	<section class="container py-4 px-xl-0">
+		@RenderBody()
+	</section>
+</article>
+
+<footer class="text-center">
+	<a class="btn btn-ecogreen text-white" href="mailto:services@ecoAPM.com">✉ Contact ecoAPM</a>
+</footer>

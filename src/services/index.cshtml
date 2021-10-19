@@ -1,0 +1,40 @@
+/Title: Services
+---
+@using SrcSet.Statiq
+@using Statiq.Common
+
+<h4>ecoAPM provides several services to help your organization improve its software's performance</h4>
+
+@foreach (var service in ecoAPM.Site.Content.Services(Outputs))
+{
+	<section class="row my-4 align-items-center">
+		<aside class="col-md-5 mb-3 mb-md-0">
+			@Html.Raw(ResponsiveImages.SrcSet(service.GetString("Header"), attributes: new Dictionary<string, string>
+			{
+				{ "class", "img-fluid w-100" },
+				{ "alt", service.GetString("Alt") },
+				{ "sizes", "(max-width: 768px) 100vw, 50vw" }
+			}))
+		</aside>
+
+		<div class="col-md-7">
+			<h3>
+				<a href="/@service.Destination.Parent.GetRelativeOutputPath().ToString()">
+					@service.GetTitle()
+				</a>
+			</h3>
+			<h5>
+				@service.GetString("Description")
+			</h5>
+			<a href="/@service.Destination.Parent.GetRelativeOutputPath().ToString()">
+				Learn more
+			</a>
+		</div>
+	</section>
+
+	<hr/>
+}
+
+<h4>Looking for something specific? </h4>
+
+<p>Feel free to get in touch using the link below!</p>

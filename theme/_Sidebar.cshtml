@@ -1,0 +1,24 @@
+@{ Layout = "_Simple.cshtml"; }
+@using SrcSet.Statiq
+
+<article class="row">
+	<aside class="col-12 col-md-4">
+		@if (Document.GetBool("StaticHeader"))
+		{
+			<img src="/@Document.GetString("Header")" alt="@Document.GetString("Alt")" class="img-fluid w-100 sidebar-img" sizes="(max-width: 768px) 100vw, 33vw" />
+		}
+		else
+		{
+			@Html.Raw(ResponsiveImages.SrcSet(Document.GetString("Header"), attributes: new Dictionary<string, string>
+			{
+			{ "class", "img-fluid w-100 sidebar-img" },
+			{ "alt", Document.GetString("Alt") },
+			{ "sizes", "(max-width: 768px) 100vw, 33vw" }
+		}))
+		}
+	</aside>
+
+	<section class="col-12 col-md-8">
+		@RenderBody()
+	</section>
+</article>

@@ -1,0 +1,33 @@
+Title: ecoAPM is an open source software company
+Layout: _Services
+Header: images/typing.jpg
+Alt: Person typing on a laptop
+---
+@using Statiq.Common
+
+<p>All of our software will always be free and open source. It's what we do!</p>
+
+<h4>ecoAPM</h4>
+<section class="card overlay btn-ecogreen p-4 mb-3">
+	@Html.Raw(await ecoAPM.Site.Content.GetContent(Outputs, "software/ecoAPM/index.html"))
+</section>
+
+<p>In the meantime, check out our additional software:</p>
+
+@foreach (var category in ecoAPM.Site.Content.SoftwareCategories(Outputs))
+{
+	<h4>@(!string.IsNullOrWhiteSpace(category.Key) ? category.Key :"Other")</h4>
+	<ul class="list-unstyled row">
+		@foreach (var item in category)
+		{
+			<li class="col-sm-6 col-lg-4 col-xl-3">
+				<a class="card rect-4-3 overlay btn btn-greydient text-left p-4 my-3" href="/@item.Destination.Parent.GetRelativeOutputPath()">
+					<h5 class="mb-3">
+						@item.GetTitle()
+					</h5>
+					@item.GetString("Description")
+				</a>
+			</li>
+		}
+	</ul>
+}

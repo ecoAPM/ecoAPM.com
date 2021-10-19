@@ -1,0 +1,31 @@
+﻿@{
+	Layout = "_Layout.cshtml";
+}
+@using System.Globalization
+@{
+	var sectionName = Document.Source.Parent.GetRelativeInputPath().ToString();
+	var sectionTitle = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(sectionName);
+}
+
+<header class="jumbotron-fluid bg-green">
+	<h2 class="p-3 m-0 text-center">
+		<a href="/@sectionTitle.ToLower()" class="text-white">
+			@sectionTitle
+		</a>
+	</h2>
+</header>
+
+<article class="container my-4">
+	@if (Document.GetTitle() != sectionTitle)
+	{
+		<h3 class="@(Document.GetString("Layout").Contains("Sidebar") ? "row offset-md-4 px-3 px-md-2" : string.Empty)">
+			@Document.GetTitle()
+		</h3>
+	}
+
+	@RenderBody()
+</article>
+
+<footer class="text-center">
+	<a class="btn btn-ecogreen text-white" href="mailto:info@ecoAPM.com">✉ Contact ecoAPM</a>
+</footer>
