@@ -42,5 +42,10 @@ const data = [
         name: "ecoAPM.com",
         CI: false,
         tests: false
+    },
+    {
+		name: "StatiqPipelines",
+		package: "ecoAPM.StatiqPipelines",
+		type: ".NET"
     }
 ];
