@@ -353,4 +353,3 @@ MigrationBackup/
 /.idea
 /.vscode
 /dist
-/wwwroot/lib

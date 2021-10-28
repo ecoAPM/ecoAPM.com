@@ -1,0 +1,159 @@
+---
+Title: Home
+---
+
+@using SrcSet.Statiq
+
+<header class="jumbotron bg-green text-light rounded-0">
+	<div class="container">
+		<div class="row justify-content-center align-items-center">
+			<img class="col-8 col-sm-5 col-md-4 col-lg-3 glow" src="/images/logo.png" alt="ecoAPM logo"/>
+			<div class="col-10 col-sm-6 col-md-6 col-lg-7 col-xl-6 m-5 m-sm-3 m-md-5 text-center text-sm-left">
+				<h2>Open Source</h2>
+				<h3>Application Performance Management</h3>
+				<h4>For The Planet</h4>
+			</div>
+		</div>
+	</div>
+</header>
+
+<article class="container-fluid">
+	<a id="products"></a>
+	<section class="row justify-content-center align-items-center">
+		<div class="col-xl-6 p-0">
+			@Html.Raw(ResponsiveImages.SrcSet("images/books.jpg", attributes: new Dictionary<string, string>
+			{
+				{ "class", "w-100 img-fluid" },
+				{ "alt", "Person sitting cross-legged, working on a laptop, surrounded by books" },
+				{ "sizes", "(max-width: 1200px): 100vw, 50vw" }
+			}))
+		</div>
+
+		<div class="col-xl-6">
+			<div class="container p-3 p-sm-5 p-xl-0">
+				<h2>Products</h2>
+				<h5 class="my-3">
+					<strong>ecoAPM</strong> is an Application Performance Management platform.
+				</h5>
+				<p>
+					It's 100% open source, and works with any language or framework.
+				</p>
+				<p>
+					<strong>ecoAPM</strong> has a special focus on energy consumption, to help reduce the
+					environmental impact that your software has on the planet.
+				</p>
+				<p>
+					We're busy getting <strong>ecoAPM</strong> ready for the world.
+					In the meantime, check out the rest of our
+					<a href="/OSS-dashboard">OSS tools</a>.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<p>&nbsp;</p>
+
+	<a id="services"></a>
+	<section class="row flex-xl-row-reverse justify-content-center align-items-center">
+		<div class="col-12 col-xl-6 p-0">
+			@Html.Raw(ResponsiveImages.SrcSet("images/pairing.jpg", attributes: new Dictionary<string, string>
+			{
+				{ "class", "w-100 img-fluid" },
+				{ "alt", "Developers pair-programming on a laptop" },
+				{ "sizes", "(max-width: 1200px): 100vw, 50vw" }
+			}))
+		</div>
+
+		<div class="col-xl-6">
+			<div class="container p-3 p-sm-5 p-xl-0">
+				<h2>Services</h2>
+				<h5 class="my-3">
+					Software development specializing in application performance
+				</h5>
+				<p>
+					Whether you're having specific performance pains, or just want your app running its best,
+					the team behind <strong>ecoAPM</strong> would be thrilled to help you reach your goals.
+				</p>
+				<p>
+					If you need a hand installing, maintaining, or using any of our
+					<a href="/OSS-dashboard">OSS tools</a>,
+					we're here to help! You can reach us using the links below.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<p>&nbsp;</p>
+
+	<a id="contact"></a>
+	<section class="row justify-content-center align-items-center">
+		<div class="col-xl-6 p-0">
+			@Html.Raw(ResponsiveImages.SrcSet("images/servers.jpg", attributes: new Dictionary<string, string>
+			{
+				{ "class", "w-100 img-fluid" },
+				{ "alt", "Developer standing with a laptop in front of a glass-enclosed row of server racks" },
+				{ "sizes", "(max-width: 1200px): 100vw, 50vw" }
+			}))
+		</div>
+
+		<div class="col-xl-6">
+			<div class="container p-3 p-sm-5 p-xl-0">
+				<h2>Contact</h2>
+				<h5 class="my-3">
+					We're excited that you'd like to get in touch!
+				</h5>
+				<p>
+					Here's how you can do that:
+				</p>
+				<ul class="list-unstyled">
+					<li>
+						<label class="font-weight-bolder">Email:</label>
+						<a href="mailto:info@ecoAPM.com">info@ecoAPM.com</a>
+					</li>
+					<li>
+						<label class="font-weight-bolder">GitHub:</label>
+						<a href="https://github.com/ecoAPM">ecoAPM</a>
+					</li>
+					<li>
+						<label class="font-weight-bolder">Twitter:</label>
+						<a href="https://twitter.com/ecoAPM">@@ecoAPM</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<p>&nbsp;</p>
+
+	<a id="team"></a>
+	<section class="row flex-xl-row-reverse justify-content-center align-items-center">
+		<div class="col-xl-6 p-0 mb-3">
+			@Html.Raw(ResponsiveImages.SrcSet("images/steve.jpg", attributes: new Dictionary<string, string>
+			{
+				{ "class", "w-100 img-fluid" },
+				{ "alt", "Lead Developer Steve Desmond" },
+				{ "sizes", "(max-width: 1200px): 100vw, 50vw" }
+			}))
+		</div>
+
+		<div class="col-xl-6">
+			<div class="container p-3 p-sm-5 p-xl-0">
+				<h2>Team</h2>
+				<h5 class="my-3">
+					ecoAPM is based in Ithaca, NY and led by
+					<a href="https://stevedesmond.ca">Steve Desmond</a>.
+				</h5>
+				<ul class="list-unstyled">
+					<li>
+						<label class="font-weight-bolder">GitHub:</label>
+						<a href="https://github.com/stevedesmond-ca">stevedesmond-ca</a>
+					</li>
+					<li>
+						<label class="font-weight-bolder">Twitter:</label>
+						<a href="https://twitter.com/stevedesmond_ca">@@stevedesmond_ca</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</article>

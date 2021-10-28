@@ -12,8 +12,5 @@
     "notosans": "5.0.0",
     "vue": "3.2.20"
   },
-  "scripts": {
-    "postinstall": "mkdir -p wwwroot/lib && cp node_modules/bootstrap/dist/css/bootstrap.min.css node_modules/bootstrap/dist/js/bootstrap.min.js node_modules/jquery/dist/jquery.min.js node_modules/marked/marked.min.js node_modules/notosans/* node_modules/vue/dist/vue.global.prod.js wwwroot/lib"
-  },
   "main": "index.html"
 }
