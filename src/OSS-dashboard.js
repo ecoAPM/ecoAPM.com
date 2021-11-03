@@ -52,7 +52,7 @@ const app = {
         data: data
     }),
     methods: {
-        render: (data) => marked(data),
+        render: (data) => marked.parse(data),
         link: (info) => `[${info.name}](${codeURL(info.name)})`,
         versionBadge: (info) => info.package ? `[![Version](${versionBadgeURL(info)})](${packageURL(info)})` : '',
         ciBadge: (info) => info.CI ?? true ? `[![CI](${ciBadgeURL(info.name)})](${ciURL(info.name)})` : '',
