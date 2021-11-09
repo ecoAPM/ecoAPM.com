@@ -43,7 +43,7 @@ namespace ecoAPM.Site
 				.OrderBy(c => CategoryOrder(c.Key));
 
 		private static string Order(IDocument document)
-			=> document.GetInt(Keys.Order) > 0 ? $"{document.GetInt(Keys.Order):2}"
+			=> document.GetInt(Keys.Order) > 0 ? document.GetInt(Keys.Order).ToString().PadLeft(2, '0')
 				: document.GetTitle().StartsWith("ecoAPM") ? $" {document.GetTitle()}"
 				: document.GetTitle();
 

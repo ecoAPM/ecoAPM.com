@@ -1,6 +1,7 @@
 ﻿Title: GitHub Label Sync
 Category: OSS Tools
 Description: Synchronize GitHub issue labels across repositories
+Order: 3
 
 Name: GitHubLabelSync
 Package: GitHubLabelSync

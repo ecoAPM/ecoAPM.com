@@ -1,6 +1,7 @@
 Title: LoadTestToolbox
 Category: OSS Tools
 Description: Lightweight tools for load testing web applications
+Order: 2
 
 Name: LoadTestToolbox
 Package: LoadTestToolbox
