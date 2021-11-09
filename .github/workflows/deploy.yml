@@ -20,6 +20,10 @@ jobs:
         with:
           dotnet-version: 5.0.x
 
-      - run: dotnet run -- deploy
+      - name: Restore dependencies
+        run: yarn
+
+      - name: Build & Deploy
+        run: dotnet run -- deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
