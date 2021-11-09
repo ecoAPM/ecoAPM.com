@@ -1,7 +1,7 @@
 ﻿Title: dotnet-libyear
 Category: OSS Tools
 Description: A simple measure of dependency freshness
-Order: 6
+Order: 7
 
 Name: dotnet-libyear
 Package: libyear

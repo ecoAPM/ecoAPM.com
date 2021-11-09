@@ -1,7 +1,7 @@
 ﻿Title: Statiq Pipelines
 Category: OSS Tools
 Description: Statiq pipelines, modules, and helpers used in ecoAPM's static sites
-Order: 9
+Order: 10
 
 Name: StatiqPipelines
 Package: ecoAPM.StatiqPipelines

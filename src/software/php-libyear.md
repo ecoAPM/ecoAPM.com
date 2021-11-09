@@ -1,7 +1,7 @@
 ﻿Title: php-libyear
 Category: OSS Tools
 Description: A simple measure of dependency freshness
-Order: 7
+Order: 8
 
 Name: php-libyear
 Package: ecoAPM/libyear
