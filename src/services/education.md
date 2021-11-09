@@ -14,9 +14,13 @@ We educate dev teams on modern performance practices, from both a proactive and 
 
 We like to take a language/framework-agnostic approach, as the biggest gains are often realized regardless of what specific technologies are being used, but are happy to tailor one or more sessions to meet the team where they're at.
 
+---
+
 #### Software Training
 
 We also provide training and tutorials for all of our [open source software](/software). Learn the ins and outs from those who know the software best by getting in touch below!
+
+---
 
 #### Format
 
@@ -31,6 +35,8 @@ Duration:
 Location:
 - On-Site (at your office)
 - Remote / Virtual (via video call)
+
+---
 
 #### Cost
 

@@ -9,12 +9,14 @@
 {
 	<section class="row my-4 align-items-center">
 		<aside class="col-md-5 mb-3 mb-md-0">
-			@Html.Raw(ResponsiveImages.SrcSet(service.GetString("Header"), attributes: new Dictionary<string, string>
-			{
-				{ "class", "img-fluid w-100" },
-				{ "alt", service.GetString("Alt") },
-				{ "sizes", "(max-width: 768px) 100vw, 50vw" }
-			}))
+			<a href="/@service.Destination.Parent.GetRelativeOutputPath().ToString()">
+				@Html.Raw(ResponsiveImages.SrcSet(service.GetString("Header"), attributes: new Dictionary<string, string>
+				{
+					{ "class", "img-fluid w-100" },
+					{ "alt", service.GetString("Alt") },
+					{ "sizes", "(max-width: 768px) 100vw, 50vw" }
+				}))
+			</a>
 		</aside>
 
 		<div class="col-md-7">
