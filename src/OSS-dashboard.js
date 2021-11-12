@@ -1,3 +1,4 @@
+const softwareURL = (info) => `https://ecoAPM.com/software/${info.name}`;
 const codeURL = (info) => `https://github.com/${info.org}/${info.name}`;
 
 const versionBadgeURL = (info) => `https://img.shields.io/${packageManager(info.type)}/v/${info.package}?logo=${packageManager(info.type)}&label=Install`;
@@ -53,7 +54,7 @@ const app = {
     }),
     methods: {
         render: (data) => marked.parse(data),
-        link: (info) => `[${info.name}](${codeURL(info)})`,
+        link: (info) => `[${info.name}](${softwareURL(info)})`,
         versionBadge: (info) => info.package ? `[![Version](${versionBadgeURL(info)})](${packageURL(info)})` : '',
         ciBadge: (info) => info.CI ?? true ? `[![CI](${ciBadgeURL(info)})](${ciURL(info)})` : '',
         issueBadge: (info) => `[![Issues](${issueBadgeURL(info)})](${issueURL(info)})`,
