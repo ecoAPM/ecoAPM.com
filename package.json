@@ -8,7 +8,7 @@
   "devDependencies": {
     "bootstrap": "4.6.0",
     "jquery": "3.6.0",
-    "marked": "4.0.1",
+    "marked": "4.0.3",
     "notosans": "5.0.0",
     "vue": "3.2.21"
   },
