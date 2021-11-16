@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using ecoAPM.StatiqPipelines;
 using SrcSet.Statiq;
 using Statiq.App;

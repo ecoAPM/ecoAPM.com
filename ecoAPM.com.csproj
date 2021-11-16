@@ -3,11 +3,13 @@
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net6.0</TargetFramework>
 		<RootNamespace>ecoAPM.Site</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Statiq.Web" Version="1.0.0-beta.34" />
-		<PackageReference Include="SrcSet.Statiq" Version="4.0.0" />
-		<PackageReference Include="ecoAPM.StatiqPipelines" Version="0.2.0" />
+		<PackageReference Include="Statiq.Web" Version="1.0.0-beta.34"/>
+		<PackageReference Include="SrcSet.Statiq" Version="4.0.0"/>
+		<PackageReference Include="ecoAPM.StatiqPipelines" Version="0.2.0"/>
 	</ItemGroup>
 </Project>
