@@ -9,7 +9,7 @@ namespace ecoAPM.Site;
 
 public static class Program
 {
-	public static async Task Main(string[] args)
+	public static async Task<int> Main(string[] args)
 		=> await Bootstrapper.Factory
 			.CreateDefaultWithout(args, DefaultFeatures.Pipelines)
 			.AddWeb()
