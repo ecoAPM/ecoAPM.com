@@ -40,13 +40,13 @@ const prURL = (info) => `${codeURL(info)}/pulls`;
 const ciBadgeURL = (info) => `${codeURL(info)}/workflows/CI/badge.svg`;
 const ciURL = (info) => `${codeURL(info)}/actions`;
 
-const coverageBadgeURL = (info) => qualityBadgeURL(info, 'coverage');
-const maintainabilityBadgeURL = (info) => qualityBadgeURL(info, 'sqale_rating');
-const reliabilityBadgeURL = (info) => qualityBadgeURL(info, 'reliability_rating');
-const securityBadgeURL = (info) => qualityBadgeURL(info, 'security_rating');
+const coverageBadgeURL = (info, suffix) => qualityBadgeURL(info, suffix, 'coverage');
+const maintainabilityBadgeURL = (info, suffix) => qualityBadgeURL(info, suffix, 'sqale_rating');
+const reliabilityBadgeURL = (info, suffix) => qualityBadgeURL(info, suffix, 'reliability_rating');
+const securityBadgeURL = (info, suffix) => qualityBadgeURL(info, suffix, 'security_rating');
 
-const qualityBadgeURL = (info, type) => `https://sonarcloud.io/api/project_badges/measure?project=${info.org}_${info.name}&metric=${type}`;
-const qualityURL = (info) => `https://sonarcloud.io/dashboard?id=${info.org}_${info.name}`;
+const qualityBadgeURL = (info, suffix, type) => `https://sonarcloud.io/api/project_badges/measure?project=${info.org}_${info.name}${suffix ?? ''}&metric=${type}`;
+const qualityURL = (info, suffix) => `https://sonarcloud.io/dashboard?id=${info.org}_${info.name}${suffix ?? ''}`;
 
 const app = {
     data: () => ({
@@ -54,15 +54,51 @@ const app = {
     }),
     methods: {
         render: (data) => marked.parse(data),
+
         link: (info) => `[${info.name}](${softwareURL(info)})`,
-        versionBadge: (info) => info.package ? `[![Version](${versionBadgeURL(info)})](${packageURL(info)})` : '',
-        ciBadge: (info) => info.CI ?? true ? `[![CI](${ciBadgeURL(info)})](${ciURL(info)})` : '',
+
+        versionBadge: (info) => info.package
+            ? `[![Version](${versionBadgeURL(info)})](${packageURL(info)})`
+            : '',
+
+        ciBadge: (info) => info.CI ?? true
+            ? `[![CI](${ciBadgeURL(info)})](${ciURL(info)})`
+            : '',
+
         issueBadge: (info) => `[![Issues](${issueBadgeURL(info)})](${issueURL(info)})`,
+
         prBadge: (info) => `[![PRs](${prBadgeURL(info)})](${prURL(info)})`,
-        coverageBadge: (info) => info.tests ?? true ? `[![Coverage](${coverageBadgeURL(info)})](${qualityURL(info)})` : '',
-        maintainabilityBadge: (info) => info.quality ?? true ? `[![Maintainability](${maintainabilityBadgeURL(info)})](${qualityURL(info)})` : '',
-        reliabilityBadge: (info) => info.quality ?? true ? `[![Reliability](${reliabilityBadgeURL(info)})](${qualityURL(info)})` : '',
-        securityBadge: (info) => info.quality ?? true ? `[![Security](${securityBadgeURL(info)})](${qualityURL(info)})` : ''
+
+	components: (info) => info.split ? `App <br/> Server` : '',
+
+        coverageBadge: (info) => info.tests ?? true
+            ? (info.split
+                ? `[![App Coverage](${coverageBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
+                + `[![Server Coverage](${coverageBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
+                : `[![Coverage](${coverageBadgeURL(info)})](${qualityURL(info)})`)
+            : '',
+
+        maintainabilityBadge: (info) => info.quality ?? true
+            ? (info.split
+                ? `[![App Maintainability](${maintainabilityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
+                + `[![Server Maintainability](${maintainabilityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
+                : `[![Maintainability](${maintainabilityBadgeURL(info)})](${qualityURL(info)})`)
+            : '',
+
+        reliabilityBadge: (info) => info.quality ?? true
+            ? (info.split
+                ? `[![App Reliability](${reliabilityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
+                + `[![Server Reliability](${reliabilityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
+                : `[![Reliability](${reliabilityBadgeURL(info)})](${qualityURL(info)})`)
+            : '',
+
+        securityBadge: (info) => info.quality ?? true
+            ? (info.split
+                ? `[![App Security](${securityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
+                + `[![Server Security](${securityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
+                : `[![Security](${securityBadgeURL(info)})](${qualityURL(info)})`)
+            : ''
     }
 };
+
 Vue.createApp(app).mount('table');

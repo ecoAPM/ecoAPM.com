@@ -7,7 +7,7 @@ Layout: _Layout
 
 <div class="container-fluid">
     <h2 class="mt-4 mb-2">OSS Dashboard</h2>
-    <table class="table table-bordered table-hover table-striped table-responsive-xl">
+    <table class="table table-bordered table-hover table-striped table-responsive-xl text-center">
         <caption>
             All software in this table is included in ecoAPM support subscriptions.
             Any software not included in this table should be considered either experimental or retired.
@@ -19,6 +19,7 @@ Layout: _Layout
                 <th scope="col">Issues</th>
                 <th scope="col">PRs</th>
                 <th scope="col">CI</th>
+                <th scope="col">Component</th>
                 <th scope="col">Coverage</th>
                 <th scope="col">Maintainability</th>
                 <th scope="col">Reliability</th>
@@ -27,11 +28,12 @@ Layout: _Layout
         </thead>
         <tbody>
             <tr v-for="info in data">
-                <th scope="row" v-html="render(link(info))"></th>
+                <th scope="row" v-html="render(link(info))" class="text-left"></th>
                 <td v-html="render(versionBadge(info))"></td>
                 <td v-html="render(issueBadge(info))"></td>
                 <td v-html="render(prBadge(info))"></td>
                 <td v-html="render(ciBadge(info))"></td>
+                <td v-html="render(components(info))" class="text-right"></td>
                 <td v-html="render(coverageBadge(info))"></td>
                 <td v-html="render(maintainabilityBadge(info))"></td>
                 <td v-html="render(reliabilityBadge(info))"></td>

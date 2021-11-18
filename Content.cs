@@ -29,7 +29,8 @@ public static class Content
 						   !doc.GetString("Package").IsNullOrWhiteSpace() ? $@"package:""{doc.GetString("Package")}""" : null,
 						   !doc.GetString("Type").IsNullOrWhiteSpace() ? $@"type:""{doc.GetString("Type")}""" : null,
 						   !doc.GetString("CI").IsNullOrWhiteSpace() ? $@"CI:{doc.GetString("CI")}" : null,
-						   !doc.GetString("Tests").IsNullOrWhiteSpace() ? $@"tests:{doc.GetString("Tests")}" : null
+						   !doc.GetString("Tests").IsNullOrWhiteSpace() ? $@"tests:{doc.GetString("Tests")}" : null,
+						   !doc.GetString("Split").IsNullOrWhiteSpace() ? $@"split:{doc.GetString("Split")}" : null
 				   }.Where(s => s != null)
 			   )
 			   + "}";
