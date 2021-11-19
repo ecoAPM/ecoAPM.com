@@ -49,22 +49,20 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 .btn-greydient {
-	color: white;
 	font-weight: revert;
-	border-color: #777;
-	background: #888 linear-gradient(#999, #888);
+	border-color: #ccc;
+	background: #eee linear-gradient(#eee, #ddd);
 }
 
 .btn-greydient:hover,
 .btn-greydient:focus {
-	color: white;
-	border-color: #666;
-	background: #777 linear-gradient(#888, #777);
+	border-color: #bbb;
+	background: #ddd linear-gradient(#ddd, #ccc);
 }
 
 .btn-greydient:active {
-	border-color: #555;
-	background: #666 linear-gradient(#777, #666);
+	border-color: #aaa;
+	background: #ccc linear-gradient(#ccc, #bbb);
 }
 
 .jumbotron {

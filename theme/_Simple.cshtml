@@ -1,8 +1,6 @@
-﻿@{
-	Layout = "_Layout.cshtml";
-}
-@using System.Globalization
+﻿@using System.Globalization
 @{
+	Layout = "_Layout";
 	var sectionName = Document.Source.Parent.GetRelativeInputPath().ToString();
 	var sectionTitle = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(sectionName);
 }
