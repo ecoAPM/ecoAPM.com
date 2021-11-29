@@ -10,7 +10,7 @@
     "jquery": "3.6.0",
     "marked": "4.0.5",
     "notosans": "5.0.0",
-    "vue": "3.2.22"
+    "vue": "3.2.23"
   },
   "main": "index.html"
 }
