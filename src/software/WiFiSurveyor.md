@@ -3,6 +3,8 @@ Category: OSS Tools
 Description: Visualize Wi-Fi signal strength over a geographic area
 
 Name: WiFiSurveyor
+Type: bin
+Package: ecoAPM/WiFiSurveyor
 Split: true
 ---
 

@@ -1,7 +1,7 @@
 const softwareURL = (info) => `https://ecoAPM.com/software/${info.name}`;
 const codeURL = (info) => `https://github.com/${info.org}/${info.name}`;
 
-const versionBadgeURL = (info) => `https://img.shields.io/${packageManager(info.type)}/v/${info.package}?logo=${packageManager(info.type)}&label=Install`;
+const versionBadgeURL = (info) => `https://img.shields.io/${packageManager(info.type)}/${packageManagerPrefix(info.type)}/${info.package}?logo=${packageManager(info.type)}&label=Install`;
 
 const packageManager = (type) => {
     switch (type) {
@@ -11,12 +11,14 @@ const packageManager = (type) => {
             return 'npm';
         case 'PHP':
             return 'packagist';
+        case 'bin':
+            return 'github';
         default:
             return '';
     }
 };
 
-const packageURL = (info) => `https://${packageManagerURL(info.type)}/${info.package}`;
+const packageURL = (info) => `https://${packageManagerURL(info.type)}/${info.package}${packageManagerSuffix(info.type)}`;
 
 const packageManagerURL = (type) => {
     switch (type) {
@@ -26,10 +28,30 @@ const packageManagerURL = (type) => {
             return 'npmjs.com/package';
         case 'PHP':
             return 'packagist.org/packages';
+        case 'bin':
+            return 'github.com';
         default:
             return '';
     }
 };
+
+const packageManagerPrefix = (type) => {
+    switch (type) {
+        case 'bin':
+            return 'v/release';
+        default:
+            return 'v';
+    }
+}
+
+const packageManagerSuffix = (type) => {
+    switch (type) {
+        case 'bin':
+            return '/releases';
+        default:
+            return '';
+    }
+}
 
 const issueBadgeURL = (info) => `https://img.shields.io/github/issues-raw/${info.org}/${info.name}?logo=GitHub&label=Issues`;
 const issueURL = (info) => `${codeURL(info)}/issues`;
