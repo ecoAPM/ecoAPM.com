@@ -43,19 +43,19 @@ The process includes everything from the "Overview" report, plus:
 | | Overview | Detail |
 |---|:---:|:---:|
 | *Report Contents* |
-| &nbsp; High-Level Summary | 🗸 | 🗸 |
-| &nbsp; Detailed Analysis | | 🗸 |
+| - High-Level Summary | 🗸 | 🗸 |
+| - Detailed Analysis | | 🗸 |
 | *Interaction* |
-| &nbsp; Meet with managers | 🗸 | 🗸 |
-| &nbsp; Meet with the team | 🗸 | 🗸 |
-| &nbsp; Pair with developers | | 🗸 |
+| - Meet with managers | 🗸 | 🗸 |
+| - Meet with the team | 🗸 | 🗸 |
+| - Pair with developers | | 🗸 |
 | *Analysis* |
-| &nbsp; Running app | 🗸 | 🗸 |
-| &nbsp; Application code | 🗸 | 🗸 |
-| &nbsp; Debugging and profiling |  | 🗸 |
+| - Running app | 🗸 | 🗸 |
+| - Application code | 🗸 | 🗸 |
+| - Debugging and profiling |  | 🗸 |
 | *Administration* |
-| &nbsp; Status updates | | 🗸 |
-| &nbsp; Typical Turnaround | 1-2 weeks | 1-2 months |
-| &nbsp; Cost [*](/about/rates) | $1,000 | $4,000 |
+| - Status updates | | 🗸 |
+| - Typical Turnaround | 1-2 weeks | 1-2 months |
+| - Cost [*](/about/rates) | $1,000 | $4,000 |
 
 Book your Performance Audit Report now by contacting ecoAPM using the email button below!

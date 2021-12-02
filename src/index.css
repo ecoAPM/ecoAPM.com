@@ -82,6 +82,10 @@ table p {
 	margin: 0;
 }
 
+.table td, .table th {
+	vertical-align: revert;
+}
+
 .faded {
 	filter: brightness(75%);
 }
