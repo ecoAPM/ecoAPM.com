@@ -34,10 +34,10 @@ Layout: _Layout
                 <td v-html="render(prBadge(info))"></td>
                 <td v-html="render(ciBadge(info))"></td>
                 <td v-html="render(components(info))" class="text-right"></td>
-                <td v-html="render(coverageBadge(info))"></td>
-                <td v-html="render(maintainabilityBadge(info))"></td>
-                <td v-html="render(reliabilityBadge(info))"></td>
-                <td v-html="render(securityBadge(info))"></td>
+                <td v-html="render(coverageBadges(info))"></td>
+                <td v-html="render(maintainabilityBadges(info))"></td>
+                <td v-html="render(reliabilityBadges(info))"></td>
+                <td v-html="render(securityBadges(info))"></td>
             </tr>
         </tbody>
     </table>

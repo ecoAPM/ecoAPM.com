@@ -35,23 +35,13 @@ const packageManagerURL = (type) => {
     }
 };
 
-const packageManagerPrefix = (type) => {
-    switch (type) {
-        case 'bin':
-            return 'v/release';
-        default:
-            return 'v';
-    }
-}
+const packageManagerPrefix = (type) => type == 'bin'
+    ? 'v/release'
+    : 'v';
 
-const packageManagerSuffix = (type) => {
-    switch (type) {
-        case 'bin':
-            return '/releases';
-        default:
-            return '';
-    }
-}
+const packageManagerSuffix = (type) => type == 'bin'
+    ? '/releases'
+    : '';
 
 const issueBadgeURL = (info) => `https://img.shields.io/github/issues-raw/${info.org}/${info.name}?logo=GitHub&label=Issues`;
 const issueURL = (info) => `${codeURL(info)}/issues`;
@@ -61,6 +51,26 @@ const prURL = (info) => `${codeURL(info)}/pulls`;
 
 const ciBadgeURL = (info) => `${codeURL(info)}/workflows/CI/badge.svg`;
 const ciURL = (info) => `${codeURL(info)}/actions`;
+
+const coverageBadge = (info) => info.split
+    ? `[![App Coverage](${coverageBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
+    + `[![Server Coverage](${coverageBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
+    : `[![Coverage](${coverageBadgeURL(info)})](${qualityURL(info)})`;
+
+const maintainabilityBadge = (info) => info.split
+    ? `[![App Maintainability](${maintainabilityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
+    + `[![Server Maintainability](${maintainabilityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
+    : `[![Maintainability](${maintainabilityBadgeURL(info)})](${qualityURL(info)})`;
+
+const reliabilityBadge = (info) => info.split
+    ? `[![App Reliability](${reliabilityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
+    + `[![Server Reliability](${reliabilityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
+    : `[![Reliability](${reliabilityBadgeURL(info)})](${qualityURL(info)})`;
+
+const securityBadge = (info) => info.split
+    ? `[![App Security](${securityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
+    + `[![Server Security](${securityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
+    : `[![Security](${securityBadgeURL(info)})](${qualityURL(info)})`;
 
 const coverageBadgeURL = (info, suffix) => qualityBadgeURL(info, suffix, 'coverage');
 const maintainabilityBadgeURL = (info, suffix) => qualityBadgeURL(info, suffix, 'sqale_rating');
@@ -91,34 +101,24 @@ const app = {
 
         prBadge: (info) => `[![PRs](${prBadgeURL(info)})](${prURL(info)})`,
 
-	components: (info) => info.split ? `App <br/> Server` : '',
-
-        coverageBadge: (info) => info.tests ?? true
-            ? (info.split
-                ? `[![App Coverage](${coverageBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
-                + `[![Server Coverage](${coverageBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
-                : `[![Coverage](${coverageBadgeURL(info)})](${qualityURL(info)})`)
+        components: (info) => info.split
+            ? `App <br/> Server`
             : '',
 
-        maintainabilityBadge: (info) => info.quality ?? true
-            ? (info.split
-                ? `[![App Maintainability](${maintainabilityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
-                + `[![Server Maintainability](${maintainabilityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
-                : `[![Maintainability](${maintainabilityBadgeURL(info)})](${qualityURL(info)})`)
+        coverageBadges: (info) => info.tests ?? true
+            ? coverageBadge(info)
             : '',
 
-        reliabilityBadge: (info) => info.quality ?? true
-            ? (info.split
-                ? `[![App Reliability](${reliabilityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
-                + `[![Server Reliability](${reliabilityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
-                : `[![Reliability](${reliabilityBadgeURL(info)})](${qualityURL(info)})`)
+        maintainabilityBadges: (info) => info.quality ?? true
+            ? maintainabilityBadge(info)
             : '',
 
-        securityBadge: (info) => info.quality ?? true
-            ? (info.split
-                ? `[![App Security](${securityBadgeURL(info, '-App')})](${qualityURL(info, '-App')}) <br/>`
-                + `[![Server Security](${securityBadgeURL(info, '-Server')})](${qualityURL(info, '-Server')})`
-                : `[![Security](${securityBadgeURL(info)})](${qualityURL(info)})`)
+        reliabilityBadges: (info) => info.quality ?? true
+            ? reliabilityBadge(info)
+            : '',
+
+        securityBadges: (info) => info.quality ?? true
+            ? securityBadge(info)
             : ''
     }
 };
