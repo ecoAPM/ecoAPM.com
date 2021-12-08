@@ -21,7 +21,7 @@ All of our software will always be free and open source, and so by working with 
 
 #### Discounts
 
-ecoAPM has implemented a set of stacking 5% discounts for the following categories.
+ecoAPM has implemented a set of stacking 10% discounts for the following categories.
 
 Check each box that applies to calculate your discount:
 - [ ] Local organization (Ithaca, NY + adjacent counties)
