@@ -9,7 +9,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Statiq.Web" Version="1.0.0-beta.34" />
-		<PackageReference Include="SrcSet.Statiq" Version="4.0.0" />
+		<PackageReference Include="SrcSet.Statiq" Version="4.1.0" />
 		<PackageReference Include="ecoAPM.StatiqPipelines" Version="1.0.0" />
 	</ItemGroup>
 </Project>
