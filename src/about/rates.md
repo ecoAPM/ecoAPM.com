@@ -8,10 +8,11 @@ All of our software will always be free and open source, and so by working with 
 | Service | Cost (USD$) |
 |---|---|
 | [*Contracting / Consulting*](/services/consulting) |
-| Standard rate | $100 / hour (5 hour deposit) |
+| Open Source | $100 / hour (5 hour deposit) |
+| Proprietary | $120 / hour (5 hour deposit) |
 | [*Performance Audit Reports*](/services/report) |
-| Performance Overview Report | $1,000 |
-| Detailed Analysis Report |$4,000 |
+| Performance Overview Report | $1,200 |
+| Detailed Analysis Report |$4,800 |
 | [*Support Subscriptions*](/support/subscriptions) |
 | Email | $100 / month , $1,000 / year |
 | Live | $400 / month , $4,000 / year |

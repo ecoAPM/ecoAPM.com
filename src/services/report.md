@@ -56,6 +56,6 @@ The process includes everything from the "Overview" report, plus:
 | *Administration* |
 | - Status updates | | 🗸 |
 | - Typical Turnaround | 1-2 weeks | 1-2 months |
-| - Cost [*](/about/rates) | $1,000 | $4,000 |
+| - Cost [*](/about/rates) | $1,200 | $4,800 |
 
 Book your Performance Audit Report now by contacting ecoAPM using the email button below!
