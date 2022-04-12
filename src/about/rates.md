@@ -1,4 +1,4 @@
-﻿Title: Rates
+Title: Rates
 ---
 
 ecoAPM strives to provide competitive pricing for each of our services.

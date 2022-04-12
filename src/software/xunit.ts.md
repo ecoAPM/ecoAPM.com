@@ -1,4 +1,4 @@
-﻿Title: xunit.ts
+Title: xunit.ts
 Category: OSS Tools
 Description: A TypeScript unit testing framework, following standard xUnit patterns
 Logo: true

@@ -1,14 +1,18 @@
-﻿<title>@Document.GetTitle() &ndash; ecoAPM</title>
+@{
+	var title = $"{Document.GetTitle()} – ecoAPM";
+	var description = Document.GetString("Description") ?? "Open Source Application Performance Management For The Planet";
+}
+<title>@title</title>
 
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="description" content="Open Source Application Performance Management For The Planet"/>
+<meta name="description" content="@description"/>
 
 <meta property="og:site_name" content="ecoAPM"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://ecoAPM.com/"/>
-<meta property="og:title" content="ecoAPM"/>
-<meta property="og:description" content="Open Source Application Performance Management For The Planet"/>
+<meta property="og:title" content="@title"/>
+<meta property="og:description" content="@description"/>
 <meta property="og:image" content="https://ecoAPM.com/images/logo.png"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:site" content="ecoAPM"/>
