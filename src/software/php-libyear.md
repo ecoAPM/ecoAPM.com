@@ -1,4 +1,4 @@
-﻿Title: php-libyear
+Title: php-libyear
 Category: OSS Tools
 Description: A simple measure of dependency freshness
 Order: 8

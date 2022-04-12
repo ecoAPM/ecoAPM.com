@@ -1,4 +1,4 @@
-﻿Title: Age Grade Calculator
+Title: Age Grade Calculator
 Category: Community Service
 GitHubOrganization: FingerLakesRunnersClub
 Description: A .NET implementation of USATF's Age Grade metric using Alan Jones' official tables

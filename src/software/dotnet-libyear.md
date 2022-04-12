@@ -1,4 +1,4 @@
-﻿Title: dotnet-libyear
+Title: dotnet-libyear
 Category: OSS Tools
 Description: A simple measure of dependency freshness
 Order: 7

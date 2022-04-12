@@ -1,4 +1,4 @@
-﻿Title: Support Subscriptions
+Title: Support Subscriptions
 Layout: _Services
 Header: images/face-to-face.jpg
 Alt: Person using a laptop

@@ -1,4 +1,4 @@
-﻿Title: Tompkins County COVID Numbers
+Title: Tompkins County COVID Numbers
 Category: Community Service
 Description: Twitter bot that automatically tweets local case aggregates
 Show: false

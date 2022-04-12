@@ -1,4 +1,4 @@
-﻿Title: Education & Training
+Title: Education & Training
 Header: images/meeting.jpg
 Alt: A group of people sitting at a large conference room table, looking at a person at a whiteboard
 Description: Learn the skills and practices needed for modern application performance

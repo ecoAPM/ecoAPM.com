@@ -1,4 +1,4 @@
-﻿Title: Wi-Fi Surveyor
+Title: Wi-Fi Surveyor
 Category: OSS Tools
 Description: Visualize Wi-Fi signal strength over a geographic area
 
