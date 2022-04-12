@@ -1,4 +1,4 @@
-﻿Title: Support Our OSS
+Title: Support Our OSS
 Layout: _Services
 Header: images/multitask.jpg
 Alt: A person at their laptop with a phone and coffee in-hand

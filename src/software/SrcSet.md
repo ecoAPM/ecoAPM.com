@@ -1,4 +1,4 @@
-﻿Title: SrcSet
+Title: SrcSet
 Category: OSS Tools
 Description: A CLI to create sets of responsive images for the web
 Order: 6

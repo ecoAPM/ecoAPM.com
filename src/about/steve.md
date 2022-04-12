@@ -1,4 +1,4 @@
-﻿Title: About Steve
+Title: About Steve
 Layout: _Sidebar
 Header: images/steve-new.jpg
 Alt: photo of Steve

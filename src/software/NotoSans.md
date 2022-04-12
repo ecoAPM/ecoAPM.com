@@ -1,4 +1,4 @@
-﻿Title: Noto Sans Web Fonts
+Title: Noto Sans Web Fonts
 Category: OSS Tools
 Description: NPM package for WOFF2 formatted Noto Sans fonts
 Order: 9

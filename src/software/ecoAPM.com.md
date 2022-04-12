@@ -1,4 +1,4 @@
-﻿Title: ecoAPM.com
+Title: ecoAPM.com
 Description: Yes, even this website is OSS!
 Name: ecoAPM.com
 Tests: false

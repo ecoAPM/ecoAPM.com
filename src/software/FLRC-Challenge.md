@@ -1,4 +1,4 @@
-﻿Title: Finger Lakes Runners Club Challenge Dashboard
+Title: Finger Lakes Runners Club Challenge Dashboard
 Category: Community Service
 GitHubOrganization: FingerLakesRunnersClub
 Description: A year-long socially-distanced running competition
