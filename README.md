@@ -12,7 +12,7 @@ This is the source for https://ecoAPM.com
 ## Requirements
 
 - Node.js v16
-- .NET SDK v6.0
+- .NET SDK 7
 - yarn
 
 ## Installation
