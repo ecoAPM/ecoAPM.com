@@ -7,10 +7,10 @@
   "private": true,
   "devDependencies": {
     "bootstrap": "4.6.0",
-    "jquery": "3.6.1",
-    "marked": "4.2.2",
+    "jquery": "3.6.4",
+    "marked": "5.0.1",
     "notosans": "5.0.0",
-    "vue": "3.2.44"
+    "vue": "3.2.47"
   },
   "main": "index.html"
 }
