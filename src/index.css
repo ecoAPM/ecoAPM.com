@@ -231,3 +231,7 @@ ul.contains-task-list {
 		margin-top: -2.5rem;
 	}
 }
+
+nav hr {
+	border-bottom: 1px solid darkgrey;
+}
