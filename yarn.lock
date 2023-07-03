@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.21.8.tgz#642af7d0333eab9c0ad70b14ac5e76dbde7bfdf8"
   integrity sha512-6zavDGdzG3gUqAdWvlLFfk+36RilI+Pwyuuh7HItyeScCWP3k6i8vKclAQ0bM/0y/Kz/xiwvxhMv9MgTJP5gmA==
 
+"@fontsource/noto-sans@5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans/-/noto-sans-5.0.3.tgz#2d09d98eca969995f49c5fb794c4ad541cf6ecd4"
+  integrity sha512-x6M139l0kSik4GcIquZk30yj6fjwBRzqdjcnqSAwCJ0AGk32TqZd1OysHrew31IzHUxUmPoq3YByO+4pDPRBxg==
+
 "@jridgewell/sourcemap-codec@^1.4.13":
   version "1.4.15"
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz#d7c6e6755c78567a951e04ab52ef0fd26de59f32"
@@ -138,11 +143,6 @@ nanoid@^3.1.28:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
   integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
-
-notosans@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/notosans/-/notosans-5.0.0.tgz"
-  integrity sha512-P43+ZKprxdmpq2Qvy6KZCA6aNXHI33kMRgFi46HWSW+Q7wMhuFnnJcscwyasUA8dSnyxGtVWXBgdFO/QtlpkTQ==
 
 picocolors@^0.2.1:
   version "0.2.1"

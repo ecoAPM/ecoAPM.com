@@ -1,9 +1,5 @@
 using ecoAPM.StatiqPipelines;
 using SrcSet.Statiq;
-using Statiq.App;
-using Statiq.Common;
-using Statiq.Core;
-using Statiq.Web;
 
 namespace ecoAPM.Site;
 
@@ -27,14 +23,16 @@ public static class Program
 		=> pipeline.ProcessModules.Add(new NiceURL());
 
 	private static IPipeline NodeModules(IReadOnlySettings arg)
-		=> new CopyFromNPM(new[] {
-						"bootstrap/dist/css/bootstrap.min.css",
-						"bootstrap/dist/css/bootstrap.min.css.map",
-					 	"bootstrap/dist/js/bootstrap.min.js",
-						"jquery/dist/jquery.min.js",
-						"marked/marked.min.js",
-						"notosans/*",
-						"vue/dist/vue.global.prod.js"
+		=> new CopyFromNPM(new Dictionary<string, string>
+		{
+			{ "bootstrap/dist/css/bootstrap.min.css", "" },
+			{ "bootstrap/dist/css/bootstrap.min.css.map", "" },
+			{ "bootstrap/dist/js/bootstrap.min.js", "" },
+			{ "jquery/dist/jquery.min.js", "" },
+			{ "marked/marked.min.js", "" },
+			{ "@fontsource/noto-sans/latin-300.css", "noto-sans.css" },
+			{ "@fontsource/noto-sans/files/noto-sans-latin-300-normal.woff*", "files" },
+			{ "vue/dist/vue.global.prod.js", "" }
 		});
 
 	private static IPipeline ResponsiveImages(IReadOnlySettings arg)
