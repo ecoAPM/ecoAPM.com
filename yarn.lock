@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.21.8.tgz#642af7d0333eab9c0ad70b14ac5e76dbde7bfdf8"
   integrity sha512-6zavDGdzG3gUqAdWvlLFfk+36RilI+Pwyuuh7HItyeScCWP3k6i8vKclAQ0bM/0y/Kz/xiwvxhMv9MgTJP5gmA==
 
-"@fontsource/noto-sans@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans/-/noto-sans-5.0.3.tgz#2d09d98eca969995f49c5fb794c4ad541cf6ecd4"
-  integrity sha512-x6M139l0kSik4GcIquZk30yj6fjwBRzqdjcnqSAwCJ0AGk32TqZd1OysHrew31IzHUxUmPoq3YByO+4pDPRBxg==
+"@fontsource/noto-sans@5.0.9":
+  version "5.0.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans/-/noto-sans-5.0.9.tgz#a79e4a20c36eb4352dedec5e29e4568182102440"
+  integrity sha512-SvZDr+KJJ+J5Kx05l2qtss72yEJd0YdgvNxwAwO6gDKQqTbWJ5kUi0S9TBmVoQGw0gvQtbtlG9wBz8NQygjCyg==
 
 "@jridgewell/sourcemap-codec@^1.4.13":
   version "1.4.15"
@@ -134,10 +134,10 @@ magic-string@^0.30.0:
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.13"
 
-marked@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-5.1.0.tgz#cf51f03ba04dfb3469774029fd0106d258658767"
-  integrity sha512-z3/nBe7aTI8JDszlYLk7dDVNpngjw0o1ZJtrA9kIfkkHcIF+xH7mO23aISl4WxP83elU+MFROgahqdpd05lMEQ==
+marked@7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-7.0.3.tgz#680778f4612ba483d89e851fc70690d867165e42"
+  integrity sha512-ev2uM40p0zQ/GbvqotfKcSWEa59fJwluGZj5dcaUOwDRrB1F3dncdXy8NWUApk4fi8atU3kTBOwjyjZ0ud0dxw==
 
 nanoid@^3.1.28:
   version "3.2.0"
