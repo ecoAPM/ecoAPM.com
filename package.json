@@ -9,7 +9,7 @@
     "bootstrap": "4.6.0",
     "jquery": "3.7.1",
     "marked": "9.1.2",
-    "@fontsource/noto-sans": "5.0.15",
+    "@fontsource/noto-sans": "5.0.16",
     "vue": "3.3.4"
   },
   "main": "index.html"
