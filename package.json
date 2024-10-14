@@ -10,7 +10,7 @@
     "jquery": "3.7.1",
     "marked": "14.1.2",
     "@fontsource/noto-sans": "5.1.0",
-    "vue": "3.5.11"
+    "vue": "3.5.12"
   },
   "main": "index.html"
 }
