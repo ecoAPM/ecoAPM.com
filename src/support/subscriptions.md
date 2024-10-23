@@ -40,7 +40,7 @@ ecoAPM's [standard contracting & consulting rate](/about/rates) applies, with a 
 | Slack channel | | 🗸 | 🗸 | (temporary) |
 | Video calls | | | 🗸 | (temporary) |
 | Weekly check-ins | |  | 🗸 | |
-| Cost [*](/about/rates) | $100 / month <br/> $1,000 / year | $400 / month <br/> $4,000 / year | $1,600 / month <br/> $16,000 / year | $100 / hour <br/> (5 hour deposit)
+| Cost [*](/about/rates) | $120 / month <br/> $1,200 / year | $480 / month <br/> $4,800 / year | $1,920 / month <br/> $19,200 / year | $120 / hour <br/> (5 hour deposit)
 
 <script>
 document.querySelectorAll('table').forEach(t => t.className += " table-responsive-md ");
