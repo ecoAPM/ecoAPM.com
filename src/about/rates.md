@@ -8,16 +8,16 @@ All of our software will always be free and open source, and so by working with 
 | Service | Cost (USD$) |
 |---|---|
 | [*Contracting / Consulting*](/services/consulting) |
-| Open Source | $100 / hour (5 hour deposit) |
-| Proprietary | $120 / hour (5 hour deposit) |
+| Open Source | $120 / hour (5 hour deposit) |
+| Proprietary | $150 / hour (5 hour deposit) |
 | [*Performance Audit Reports*](/services/report) |
-| Performance Overview Report | $1,200 |
-| Detailed Analysis Report |$4,800 |
+| Performance Overview Report | $1,500 |
+| Detailed Analysis Report | $6,000 |
 | [*Support Subscriptions*](/support/subscriptions) |
-| Email | $100 / month , $1,000 / year |
-| Live | $400 / month , $4,000 / year |
-| Dedicated | $1,600 / month , $16,000 / year |
-| Ad Hoc | $100 / hour (5 hour deposit) |
+| Email | $120 / month , $1,200 / year |
+| Live | $480 / month , $4,800 / year |
+| Dedicated | $1,920 / month , $19,200 / year |
+| Ad Hoc | $120 / hour (5 hour deposit) |
 | [*Education & Training*](/services/education) | *(contact for more information)*
 
 #### Discounts
