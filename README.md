@@ -11,7 +11,7 @@ This is the source for https://ecoAPM.com
 
 ## Requirements
 
-- .NET 8 SDK
+- .NET SDK
 - Node.js + yarn
 
 ## Installation
