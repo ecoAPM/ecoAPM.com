@@ -8,8 +8,8 @@
   "devDependencies": {
     "bootstrap": "4.6.0",
     "jquery": "3.7.1",
-    "marked": "15.0.1",
-    "@fontsource/noto-sans": "5.1.0",
+    "marked": "15.0.6",
+    "@fontsource/noto-sans": "5.1.1",
     "vue": "3.5.13"
   },
   "main": "index.html"
