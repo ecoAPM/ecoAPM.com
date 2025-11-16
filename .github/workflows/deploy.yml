@@ -23,7 +23,7 @@ jobs:
         run: dotnet run
 
       - name: Upload
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: 'dist'
 
@@ -42,4 +42,4 @@ jobs:
     steps:
       - id: deployment
         name: Deploy
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
