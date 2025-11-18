@@ -1,3 +1,5 @@
+import { marked } from '/lib/marked.esm.js';
+
 const softwareURL = (info) => `https://ecoAPM.com/software/${info.name}`;
 const codeURL = (info) => `https://github.com/${info.org}/${info.name}`;
 

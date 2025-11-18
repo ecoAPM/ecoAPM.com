@@ -29,7 +29,7 @@ public static class Program
 			{ "bootstrap/dist/css/bootstrap.min.css.map", "" },
 			{ "bootstrap/dist/js/bootstrap.min.js", "" },
 			{ "jquery/dist/jquery.min.js", "" },
-			{ "marked/marked.min.js", "" },
+			{ "marked/lib/marked.esm.js", "" },
 			{ "@fontsource/noto-sans/latin-300.css", "noto-sans.css" },
 			{ "@fontsource/noto-sans/files/noto-sans-latin-300-normal.woff*", "files" },
 			{ "vue/dist/vue.global.prod.js", "" }
