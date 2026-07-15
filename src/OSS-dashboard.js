@@ -51,7 +51,7 @@ const issueURL = (info) => `${codeURL(info)}/issues`;
 const prBadgeURL = (info) => `https://img.shields.io/github/issues-pr-raw/${info.org}/${info.name}?logo=GitHub&label=PRs`;
 const prURL = (info) => `${codeURL(info)}/pulls`;
 
-const ciBadgeURL = (info) => `${codeURL(info)}/workflows/CI/badge.svg`;
+const ciBadgeURL = (info) => `${codeURL(info)}/workflows/CI.yml/badge.svg?branch=main`;
 const ciURL = (info) => `${codeURL(info)}/actions`;
 
 const coverageBadge = (info) => info.split
