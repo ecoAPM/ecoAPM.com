@@ -27,10 +27,10 @@
     "@babel/helper-string-parser" "^7.29.7"
     "@babel/helper-validator-identifier" "^7.29.7"
 
-"@fontsource/noto-sans@5.2.10":
-  version "5.2.10"
-  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans/-/noto-sans-5.2.10.tgz#74476071b53fda1554ac009b98f18d763d0f7135"
-  integrity sha512-J58RVfS/C0Z2VBF+PoU260Tx8cdRGYuS+e3yQe4hYaIYDl0sEVn5CzlLo5zVRvQD0HaIUTV8AZMfqR7rtdEpqQ==
+"@fontsource/noto-sans@5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans/-/noto-sans-5.3.0.tgz#b89fca1fb672e173249250ac90fe75f5759a04c4"
+  integrity sha512-fBCog2PY7DiVVTEEqtI/Qdinx/knobHYfoGpjFXdfBX5RoJaBp1Prw2G75p0OIsdlMZg3cLo0c+YbIUYOxnQJw==
 
 "@jridgewell/sourcemap-codec@^1.5.5":
   version "1.5.5"
